@@ -1,5 +1,5 @@
 const user = document.querySelector('#users')
-
+user.style.height="100vh"
 const API_LINK = 'https://jsonplaceholder.typicode.com/users'
 async function getData(api) {
 	const response = await fetch(api)
