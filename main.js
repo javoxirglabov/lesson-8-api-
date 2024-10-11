@@ -20,7 +20,7 @@ function createCard(data) {
 		box.innerHTML = `
 		<h3 class="title">${post.title}</h3>
 		<p class="text">${post.body}</p>`
-
+		
 		main.appendChild(box)
 	})
 }

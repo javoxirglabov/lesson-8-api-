@@ -10,15 +10,22 @@ async function getData(api) {
 }
 getData(API_LINK)
 
-console.log(user)
 function createCard(data) {
 	data.forEach(users => {
 		let box = document.createElement('div')
-		// div.classList.add("card")  buyerdanham card qoshsa boladi
+		let span = document.createElement('span')
 		box.className = 'card'
+		box.style.textAlign = 'left'
 		box.innerHTML = `
-		<h3 class="title">${users.name}</h3>
-		<p class="text">${users.email}</p>`
+		<p class="title" style="margin: 0; font-size:20px;" >${`Name: ` + users.name}</p>
+		<p class="text" ><span class="span">User Name:</span>${ users.username}</p>
+		<p class="text"><span class="span">Email:</span> ${users.email}</p>
+		<p class="text"> <span class="span">  Adress:</span> ${
+			users.address.city + ', ' + users.address.street
+		}</p>
+		`
+
+		// console.log(span);
 
 		user.appendChild(box)
 	})
